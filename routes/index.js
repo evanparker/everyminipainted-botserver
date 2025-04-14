@@ -16,7 +16,7 @@ router.get("/", function (req, res, next) {
     title: "Every Mini Painted",
     description:
       "A place to both share your minis and search for painted references to work from.",
-    thumbnailImageURL: "/images/emplogo.png",
+    thumbnailImageURL: "/emplogo.png",
   });
 });
 
@@ -26,7 +26,7 @@ router.get("*", function (req, res, next) {
     title: "Every Mini Painted",
     description:
       "A place to both share your minis and search for painted references to work from.",
-    thumbnailImageURL: "/images/emplogo.png",
+    thumbnailImageURL: "/emplogo.png",
   });
 });
 
