@@ -1,5 +1,5 @@
 var express = require("express");
-const { getMini } = require("../../services/mini");
+// const { getMini } = require("../../services/mini");
 var router = express.Router();
 
 /* GET minis. */
@@ -10,11 +10,11 @@ router.get("/", function (req, res, next) {
 /* GET mini. */
 router.get("/:id", async function (req, res, next) {
   try {
-    const mini = await getMini(req.params.id);
+    // const mini = await getMini(req.params.id);
 
     res.render("minis/mini", {
-      title: `EMP - ${mini.name}`,
-      description: mini.description,
+      title: `EMP - Shady`,
+      description: "Duskwarden figure with crossbow and sabre",
     });
   } catch (e) {
     next(e);
