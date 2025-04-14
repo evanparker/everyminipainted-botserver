@@ -17,6 +17,7 @@ router.get("/:id", async function (req, res, next) {
       description: mini.description,
     });
   } catch (e) {
+    console.log(e.message);
     next(e);
   }
 });

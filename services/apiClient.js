@@ -68,5 +68,7 @@ class APIClient {
   // }
 }
 
-const apiClient = new APIClient(process.env.VITE_API_URL);
+const apiClient = new APIClient(
+  process.env.VITE_API_URL || "http://localhost:3001"
+);
 module.exports.apiClient = apiClient;
