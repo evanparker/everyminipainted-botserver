@@ -1,4 +1,4 @@
-import { apiClient } from "./apiClient.js";
+const { apiClient } = require("./apiClient");
 
 async function getMinis({ limit = 20, offset = 0 }) {
   const response = await apiClient.get(
