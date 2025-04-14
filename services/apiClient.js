@@ -68,4 +68,5 @@ class APIClient {
   // }
 }
 
-export const apiClient = new APIClient(process.env.VITE_API_URL);
+const apiClient = new APIClient(process.env.VITE_API_URL);
+module.exports.apiClient = apiClient;

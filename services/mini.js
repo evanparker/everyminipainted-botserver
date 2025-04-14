@@ -19,4 +19,5 @@ async function getMinisBySearch(search, { limit = 20, offset = 0 }) {
   return response;
 }
 
-export { getMini, getMinis, getMinisBySearch };
+// export { getMini, getMinis, getMinisBySearch };
+module.exports = { getMini, getMinis, getMinisBySearch };
