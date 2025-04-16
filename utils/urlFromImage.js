@@ -20,6 +20,9 @@ const getS3Url = ({
 
 module.exports.urlFromImage = (image) => {
   let url = "";
+  if (image === undefined) {
+    return url;
+  }
   if (image.type === "s3Image") {
     const options = [
       "quality:80",
