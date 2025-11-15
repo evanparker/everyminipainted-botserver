@@ -40,8 +40,6 @@ module.exports.urlFromImage = (image) => {
       bucket: image.s3Bucket,
       extension: "png",
     });
-  } else {
-    url = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto/q_auto:good/c_fill,h_628,w_1200/${image.cloudinaryPublicId}`;
   }
   return url;
 };
