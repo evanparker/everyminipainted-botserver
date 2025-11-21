@@ -1,7 +1,5 @@
 module.exports = {};
 
-const cloudName = process.env.VITE_CLOUD_NAME || "ddl3gn9nh";
-
 const getS3Url = ({
   signature = "insecure",
   options = "",
@@ -28,7 +26,7 @@ module.exports.urlFromImage = (image) => {
       "quality:80",
       "width:1200",
       "height:628",
-      "resizing_type:fill",
+      "resizing_type:auto",
       "enlarge:1",
       "gravity:sm",
       "extend:1",

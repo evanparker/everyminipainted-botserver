@@ -3,8 +3,6 @@ const { getMini } = require("../services/mini");
 const { urlFromImage } = require("../utils/urlFromImage");
 var router = express.Router();
 
-const cloudName = process.env.VITE_CLOUD_NAME || "ddl3gn9nh";
-
 /* GET minis. */
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Every Mini Painted" });
