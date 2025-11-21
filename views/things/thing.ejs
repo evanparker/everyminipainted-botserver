@@ -7,7 +7,12 @@
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="https://linkfork.co/" /> -->
     <meta property="og:title" content="<%= title %>" />
-    <meta property="og:image" content="<%= thumbnailImageURL %>" />
+    <!-- <meta property="og:image" content="<%= thumbnailImageURL %>" /> -->
+
+    <% for(var i=0; i<Math.min(images.length,5); i++) { %>
+      <meta property="og:image" content="<%= images[i] %>" />
+    <% } %>
+
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<%= title %>">
@@ -19,7 +24,9 @@
     <h1><%= title %></h1>
     <p><%= description %></p>
     <div>
-      <img src="<%= thumbnailImageURL %>" />
+      <% for(var i=0; i<images.length; i++) { %>
+        <div><img src="<%= images[i] %>" /></div>
+      <% } %>
     </div>
   </body>
 </html>

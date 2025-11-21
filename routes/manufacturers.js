@@ -14,10 +14,13 @@ router.get("/:id", async function (req, res, next) {
     const manufacturer = await getManufacturer(req.params.id);
     const thumbnailImageURL = urlFromImage(manufacturer.thumbnail);
 
+    const images = manufacturer.images.map((image) => urlFromImage(image));
+
     res.render("things/thing", {
       title: `EMP - ${manufacturer.name}`,
       description: manufacturer.description,
       thumbnailImageURL,
+      images,
     });
   } catch (e) {
     console.log(e.message);

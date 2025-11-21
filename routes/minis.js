@@ -14,10 +14,13 @@ router.get("/:id", async function (req, res, next) {
     const mini = await getMini(req.params.id);
     const thumbnailImageURL = urlFromImage(mini.thumbnail);
 
+    const images = mini.images.map((image) => urlFromImage(image));
+
     res.render("things/thing", {
       title: `EMP - ${mini.name}`,
       description: mini.description,
       thumbnailImageURL,
+      images,
     });
   } catch (e) {
     console.log(e.message);
