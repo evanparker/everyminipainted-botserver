@@ -28,7 +28,7 @@ module.exports.urlFromImage = (image) => {
       "height:628",
       "resizing_type:auto",
       "enlarge:1",
-      "gravity:sm",
+      "gravity:no",
       "extend:1",
     ];
 
