@@ -25,7 +25,7 @@ module.exports.urlFromImage = (image) => {
     const options = [
       "quality:80",
       "width:1200",
-      "height:1200",
+      "height:628",
       "resizing_type:auto",
       "enlarge:1",
       "gravity:no",
