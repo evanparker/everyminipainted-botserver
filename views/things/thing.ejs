@@ -9,11 +9,11 @@
     <meta property="og:title" content="<%= title %>" />
     <!-- <meta property="og:image" content="<%= thumbnailImageURL %>" /> -->
 
-    <% for(var i=0; i<Math.min(images.length,5); i++) { %>
+    <% for(var i=0; i<Math.min(images.length,4); i++) { %>
       <meta property="og:image" content="<%= images[i] %>" />
+      <meta name="twitter:image" content="<%= images[i] %>" />
     <% } %>
 
-    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<%= title %>">
     <meta name="twitter:description" content="<%= description %>">
