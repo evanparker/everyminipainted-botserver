@@ -39,5 +39,5 @@ module.exports.urlFromImage = (image) => {
       extension: "png",
     });
   }
-  return url;
+  return { ...image, url };
 };

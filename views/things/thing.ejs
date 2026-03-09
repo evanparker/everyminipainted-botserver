@@ -10,8 +10,8 @@
     <!-- <meta property="og:image" content="<%= thumbnailImageURL %>" /> -->
 
     <% for(var i=0; i<Math.min(images.length,4); i++) { %>
-      <meta property="og:image" content="<%= images[i] %>" />
-      <meta name="twitter:image" content="<%= images[i] %>" />
+      <meta property="og:image" content="<%= images[i].url %>" />
+      <meta name="twitter:image" content="<%= images[i].url %>" />
     <% } %>
 
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,10 @@
     <p><%= description %></p>
     <div>
       <% for(var i=0; i<images.length; i++) { %>
-        <div><img src="<%= images[i] %>" /></div>
+        <figure>
+          <img src="<%= images[i].url %>" alt="<%= images[i].altText %>"/>
+          <figcaption><%= images[i].caption %></figcaption>
+        </figure>
       <% } %>
     </div>
   </body>
