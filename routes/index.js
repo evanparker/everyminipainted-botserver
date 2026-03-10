@@ -4,11 +4,13 @@ var usersRouter = require("./users");
 var minisRouter = require("./minis");
 var figuresRouter = require("./figures");
 var manufacturersRouter = require("./manufacturers");
+var collectionsRouter = require("./collections");
 
 router.use("/users", usersRouter);
 router.use("/minis", minisRouter);
 router.use("/figures", figuresRouter);
 router.use("/manufacturers", manufacturersRouter);
+router.use("/collections", collectionsRouter);
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
